@@ -1,16 +1,14 @@
 import type { NextPage } from 'next'
 import React from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import SideBar from '../components/SideBar'
 import PrintPreviewFront from '../components/PrintPreviewFront'
+import PrintPreviewBack from '../components/PrintPreviewBack'
 
 const Home: NextPage = () => {
   
   const [items, setItem] = React.useState<any>([])
   const [singleItem, setSingleItem] = React.useState<any>([])
-
-  console.log(items)
 
   return (
     <React.Fragment>
@@ -25,7 +23,10 @@ const Home: NextPage = () => {
           <div className="flex flex-col w-full p-2">
             <div className="flex items-center justify-between w-full px-5 py-3">
               <h1 className="font-bold text-xl">List of Commodities</h1>
-              <PrintPreviewFront items={items} singleItem={singleItem} />
+              <div className="flex items-center space-x-3">
+                <PrintPreviewFront items={items} singleItem={singleItem} />
+                <PrintPreviewBack items={items} singleItem={singleItem} />
+              </div>
             </div>
             <table className="table-auto p-10 border border-black border-opacity-10">
               <thead className="border border-black border-opacity-10">
