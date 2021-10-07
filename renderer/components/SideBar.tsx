@@ -213,7 +213,7 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
             </button>
             <button
               className="w-full p-3 text-sm text-white text-opacity-70 rounded-lg bg-gray-800 hover:bg-opacity-70"
-              type="button"
+              type="reset"
               onClick={() => {
                 setItem([])
                 setSingleItem([])
