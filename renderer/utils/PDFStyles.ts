@@ -5,10 +5,11 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   header: {
-    marginTop: 80,
+    marginTop: 110,
+    marginRight: 90,
   },
   table: {
-    marginTop: 50,
+    marginTop: 70,
     flexDirection: 'column',
     justifyContent: 'center',
     textAlign: 'center',
@@ -21,7 +22,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   commodity_info: {
-    marginTop: 200
+    marginTop: 140
   },
   top_date: {
     textAlign: 'right',
@@ -31,34 +32,34 @@ export const styles = StyleSheet.create({
   top_permission: {
     textAlign: 'right',
     fontSize: 10,
-    marginTop: 50,
-    marginRight: 40
+    marginTop: 60,
+    marginRight: 10
   },
   pkgs_unit: {
-    textAlign: 'left',
+    textAlign: 'center',
     fontSize: 10,
     width: 50,
   },
   marks_numbers: {
-    textAlign: 'left',
+    textAlign: 'center',
     fontSize: 10,
     width: 60,
     marginLeft: 10
   },
   description_commodities: {
-    textAlign: 'left',
+    textAlign: 'center',
     fontSize: 10,
     width: 180,
-    marginLeft: 10
+    paddingLeft: 10
   },
   quantity: {
-    textAlign: 'left',
+    textAlign: 'center',
     fontSize: 10,
     width: 60,
     marginLeft: 10
   },
   weights_measurements: {
-    textAlign: 'left',
+    textAlign: 'center',
     fontSize: 10,
     width: 60,
     marginLeft: 10
@@ -82,27 +83,27 @@ export const styles = StyleSheet.create({
   currency_payment_will_be_made: {
     fontSize: 10,
     marginTop: 5,
-    marginLeft: 200
+    marginLeft: 210
   },
   name_address_supplier: {
     fontSize: 10,
-    marginTop: 5,
+    marginTop: 3,
     marginLeft: 180
   },
   row_container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
   date_delivery_zone: {
     fontSize: 10,
-    marginTop: 10,
-    marginLeft: 180
+    marginTop: 9,
+    marginLeft: 150
   },
   carrier: {
     fontSize: 10,
-    marginTop: 10,
-    marginLeft: 180
+    marginTop: 9,
+    marginLeft: 100
   },
   zone_enterprise_registration_no: {
     fontSize: 10,
@@ -110,17 +111,17 @@ export const styles = StyleSheet.create({
     marginLeft: 80
   },
   permit_area: {
-    marginTop: 50,
+    marginTop: 40,
   },
   bottom_date: {
     textAlign: 'right',
     fontSize: 10,
-    marginRight: 30
+    marginRight: 60
   },
   bottom_permission: {
-    textAlign: 'right',
+    textAlign: 'center',
     fontSize: 10,
-    marginRight: 150,
-    marginTop: 50
+    marginTop: 30,
+    marginLeft: 12
   }
 })
