@@ -14,9 +14,11 @@ if (isProd) {
   await app.whenReady();
 
   const mainWindow = createWindow('main', {
-    width: 1000,
-    height: 600,
-  });
+    width: 1280,
+    height: 720,
+  })
+
+  mainWindow.maximize()
 
   if (isProd) {
     await mainWindow.loadURL('app://./home.html');
