@@ -13,8 +13,11 @@
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "@react-pdf/renderer": "^1.6.17",
+    "electron-packager": "^15.4.0",
     "electron-serve": "^1.1.0",
+    "electron-squirrel-startup": "^1.0.0",
     "electron-store": "^8.0.1",
+    "electron-winstaller": "^5.0.0",
     "moment": "^2.29.1",
     "react-hook-form": "^7.17.1",
     "react-moment": "^1.1.1",
