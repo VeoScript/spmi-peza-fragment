@@ -16,6 +16,14 @@ export const styles = StyleSheet.create({
     height: 20,
     maxHeight: 20
   },
+  table_backpage: {
+    marginTop: 130,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign: 'center',
+    height: 20,
+    maxHeight: 20
+  },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -109,6 +117,11 @@ export const styles = StyleSheet.create({
     fontSize: 10,
     marginTop: 100,
     marginLeft: 80
+  },
+  delivery_receipt_no: {
+    marginTop: 80,
+    marginLeft: 130,
+    fontSize: 10
   },
   permit_area: {
     marginTop: 40,

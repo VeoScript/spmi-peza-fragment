@@ -96,7 +96,7 @@ const MyDocument = ({ items, singleItem }) => {
   return (
     <Document>
       <Page size="LETTER" style={styles.body}>
-        <View style={styles.table}>
+        <View style={styles.table_backpage}>
           {items.map((item: any, i: any) => (
             <View style={styles.row} key={i}>
               <Text style={styles.pkgs_unit}>{ item.pkgs_unit }</Text>
@@ -110,18 +110,7 @@ const MyDocument = ({ items, singleItem }) => {
           ))}
         </View>
         <View style={styles.commodity_info}>
-          <Text style={styles.use_of_goods_in_the_zone}>{ singleItem.use_of_goods_in_the_zone }</Text>
-          <Text style={styles.currency_payment_will_be_made}>{ singleItem.currency_payment_will_be_made }</Text>
-          <Text style={styles.name_address_supplier}>{ singleItem.name_address_supplier }</Text>
-          <View style={styles.row_container}>
-            <Text style={styles.date_delivery_zone}>{ singleItem.date_delivery_zone }</Text>
-            <Text style={styles.carrier}>{ singleItem.carrier }</Text>
-          </View>
-          <Text style={styles.zone_enterprise_registration_no}>{ singleItem.zone_enterprise_registration_no }</Text>
-        </View>
-        <View style={styles.permit_area}>
-          <Text style={styles.bottom_date}>{ singleItem.getdate }</Text>
-          <Text style={styles.bottom_permission}>{ singleItem.permission_hereby_granted }</Text>
+          <Text style={styles.delivery_receipt_no}>{ singleItem.delivery_receipt_no }</Text>
         </View>
       </Page>
     </Document>
