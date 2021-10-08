@@ -1,2 +1,2 @@
-## SPMI-Fragment
-PEZA SPMI Fragment - Print form desktop application
+## PEZA + SPMI Fragment
+PEZA + SPMI Fragment - Print Document Desktop Application

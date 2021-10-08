@@ -97,7 +97,7 @@ const MyDocument = ({ items, singleItem }) => {
     <Document>
       <Page size="LETTER" style={styles.body}>
         <View style={styles.header}>
-          <Text style={styles.top_date}>{ singleItem.getdate }</Text>
+          <Text style={styles.top_date}>{ singleItem.permit_date }</Text>
           <Text style={styles.top_permission}>{ singleItem.permission_hereby_granted }</Text>
         </View>
         <View style={styles.table}>
@@ -124,7 +124,7 @@ const MyDocument = ({ items, singleItem }) => {
           <Text style={styles.zone_enterprise_registration_no}>{ singleItem.zone_enterprise_registration_no }</Text>
         </View>
         <View style={styles.permit_area}>
-          <Text style={styles.bottom_date}>{ singleItem.getdate }</Text>
+          <Text style={styles.bottom_date}>{ singleItem.permit_date }</Text>
           <Text style={styles.bottom_permission}>{ singleItem.permission_hereby_granted }</Text>
         </View>
       </Page>

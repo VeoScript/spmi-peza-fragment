@@ -1,6 +1,5 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import Moment from 'react-moment'
 
 type TypeProps = {
   items: any
@@ -50,9 +49,9 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
     const permit_date = formData.permit_date
     const delivery_receipt_no = formData.delivery_receipt_no
 
-    let format= (d,a=d.toString().split` `)=> a[2]+"-"+a[1]+"-"+a[3]
+    // let format= (d,a=d.toString().split` `)=> a[2]+"-"+a[1]+"-"+a[3]
 
-    const getdate = format(Date())
+    // const getdate = format(Date())
 
     const initialData = [{
       pkgs_unit: pkgs_unit,
@@ -67,7 +66,7 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
     setItem([...items, ...initialData])
 
     setSingleItem({
-      getdate: getdate,
+      permit_date: permit_date,
       use_of_goods_in_the_zone: use_of_goods_in_the_zone,
       currency_payment_will_be_made: currency_payment_will_be_made,
       name_address_supplier: name_address_supplier,
@@ -130,10 +129,18 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-full space-y-1">
-            <label className="px-1 text-xs text-white text-opacity-50">Zone Enterprise & Registration No.</label>
-            <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
-              <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('zone_enterprise_registration_no', { required: true })} />
+          <div className="flex flex-row items-center w-full space-x-2">
+            <div className="flex flex-col w-full space-y-1">
+              <label className="px-1 text-xs text-white text-opacity-50">Zone Enterprise & Registration No.</label>
+              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+                <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('zone_enterprise_registration_no', { required: true })} />
+              </div>
+            </div>
+            <div className="flex flex-col w-full space-y-1">
+              <label className="px-1 text-xs text-white text-opacity-50">Permit Date</label>
+              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+                <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('permit_date', { required: true })} />
+              </div>
             </div>
           </div>
           <div className="flex flex-col w-full space-y-1">

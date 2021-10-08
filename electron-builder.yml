@@ -1,6 +1,6 @@
 appId: com.example.nextron
-productName: My Nextron App
-copyright: Copyright © 2018 Yoshihide Shiono
+productName: PEZA + SPMI Fragment
+copyright: Copyright © 2021 Jerome Villaruel (VEOSCRIPT)
 directories:
   output: dist
   buildResources: resources
