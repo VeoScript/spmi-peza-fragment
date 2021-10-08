@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   commodity_info: {
-    marginTop: 140
+    marginTop: 145
   },
   top_date: {
     textAlign: 'right',
@@ -46,16 +46,16 @@ export const styles = StyleSheet.create({
   pkgs_unit: {
     textAlign: 'center',
     fontSize: 10,
-    width: 50,
+    width: 80,
   },
   marks_numbers: {
-    textAlign: 'center',
+    textAlign: 'left',
     fontSize: 10,
     width: 60,
     marginLeft: 10
   },
   description_commodities: {
-    textAlign: 'center',
+    textAlign: 'left',
     fontSize: 10,
     width: 180,
     paddingLeft: 10
@@ -82,7 +82,7 @@ export const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 10,
     width: 50,
-    marginLeft: 10
+    marginRight: 10
   },
   use_of_goods_in_the_zone: {
     fontSize: 10,
@@ -106,12 +106,12 @@ export const styles = StyleSheet.create({
   date_delivery_zone: {
     fontSize: 10,
     marginTop: 9,
-    marginLeft: 150
+    marginLeft: 160
   },
   carrier: {
     fontSize: 10,
     marginTop: 9,
-    marginLeft: 100
+    marginLeft: 150
   },
   zone_enterprise_registration_no: {
     fontSize: 10,

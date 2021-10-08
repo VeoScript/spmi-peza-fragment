@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>SPMI Fragment</title>
+        <title>PEZA + SPMI Fragment</title>
       </Head>
       <div className="flex flex-col w-full h-screen cursor-default bg-gray-700 text-white">
         <div className="flex flex-col w-full max-w-full h-full overflow-hidden border-b border-black border-opacity-10">
