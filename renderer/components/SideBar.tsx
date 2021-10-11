@@ -66,7 +66,6 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
     setItem([...items, ...initialData])
 
     setSingleItem({
-      permit_date: permit_date,
       use_of_goods_in_the_zone: use_of_goods_in_the_zone,
       currency_payment_will_be_made: currency_payment_will_be_made,
       name_address_supplier: name_address_supplier,
@@ -74,6 +73,7 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
       carrier: carrier,
       zone_enterprise_registration_no: zone_enterprise_registration_no,
       permission_hereby_granted: permission_hereby_granted,
+      permit_date: permit_date,
       delivery_receipt_no: delivery_receipt_no
     })
 
