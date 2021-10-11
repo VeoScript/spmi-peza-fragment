@@ -94,7 +94,7 @@ const Home: NextPage = () => {
                   </div>
                   <div className="flex flex-col w-full p-3 rounded-lg border border-black border-opacity-10 bg-gray-800 space-y-1">
                     <span className="flex w-full font-light text-xs text-white text-opacity-50">Permit Date</span>
-                    <span>{ singleItem.getdate }</span>
+                    <span>{ singleItem.permit_date }</span>
                   </div>
                 </div>
                 <div className="flex flex-col w-full p-3 rounded-lg border border-black border-opacity-10 bg-gray-800 space-y-1">

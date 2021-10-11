@@ -93,6 +93,7 @@ const PrintPreviewFront: FC<TypeProps> = ({ items, singleItem }) =>  {
 }
 
 const MyDocument = ({ items, singleItem }) => {
+  console.log(items, singleItem)
   return (
     <Document>
       <Page size="LETTER" style={styles.body}>
