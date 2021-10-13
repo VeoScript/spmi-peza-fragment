@@ -53,15 +53,17 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
 
     // const getdate = format(Date())
 
-    const initialData = [{
-      pkgs_unit: pkgs_unit,
-      marks_numbers: marks_numbers,
-      description_commodities: description_commodities,
-      quantity: quantity,
-      weights_measurements: weights_measurements,
-      unit_value: unit_value,
-      total_value: total_value
-    }]
+    const initialData = [
+      {
+        pkgs_unit: pkgs_unit,
+        marks_numbers: marks_numbers,
+        description_commodities: description_commodities,
+        quantity: quantity,
+        weights_measurements: weights_measurements,
+        unit_value: unit_value,
+        total_value: total_value
+      }
+    ]
 
     setItem([...items, ...initialData])
 
@@ -93,18 +95,18 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
   return (
     <form onSubmit={handleSubmit(addCommodity)} className="flex flex-row items-center w-full h-full">     
       <div className="flex flex-col items-start w-full h-full overflow-y-auto px-3 py-5 space-y-5">
-        <div className="font-bold text-sm">SPMI FRAGMENT (Single Data)</div>
+        <div className="font-bold text-sm">APPLICATION FOR PERMIT (Single Data)</div>
         <div className="flex flex-col w-full space-y-3">
           <div className="flex flex-row items-center w-full space-x-2">
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Use of goods in the zone</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('use_of_goods_in_the_zone', { required: true })} />
               </div>
             </div>
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Currency in which payment will be made</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('currency_payment_will_be_made', { required: true })} />
               </div>
             </div>
@@ -112,19 +114,19 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
           <div className="flex flex-row items-center w-full space-x-2">
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Name and Address of Supplier</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('name_address_supplier', { required: true })} />
               </div>
             </div>
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Date of Delivery to the Zone</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('date_delivery_zone', { required: true })} />
               </div>
             </div>
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Carrier</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('carrier', { required: true })} />
               </div>
             </div>
@@ -132,27 +134,27 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
           <div className="flex flex-row items-center w-full space-x-2">
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Zone Enterprise & Registration No.</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('zone_enterprise_registration_no', { required: true })} />
               </div>
             </div>
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Permit Date</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('permit_date', { required: true })} />
               </div>
             </div>
           </div>
           <div className="flex flex-col w-full space-y-1">
             <label className="px-1 text-xs text-white text-opacity-50">Persmission is hereby granted to bring into the</label>
-            <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+            <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
               <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('permission_hereby_granted', { required: true })} />
             </div>
           </div>
           <div className="flex flex-row items-center w-full space-x-2">
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Delivery Receipt No.</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('delivery_receipt_no', { required: true })} />
               </div>
             </div>
@@ -161,38 +163,38 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
       </div>
 
       <div className="flex flex-col items-start w-full max-w-xl h-full overflow-y-auto px-3 py-5 space-y-5">
-        <div className="font-bold text-sm">SPMI FRAGMENT (Data List)</div>
+        <div className="font-bold text-sm">APPLICATION FOR PERMIT (Data List)</div>
         <div className="flex flex-col w-full space-y-3">
           <div className="flex flex-row items-center w-full space-x-2">
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">No. of Pkgs. Units</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('pkgs_unit', { required: true })} />
               </div>
             </div>
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Marks & Numbers</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('marks_numbers', { required: true })} />
               </div>
             </div>
           </div>
           <div className="flex flex-col w-full space-y-1">
             <label className="px-1 text-xs text-white text-opacity-50">Description of Commodities</label>
-            <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+            <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
               <textarea className="w-full p-3 text-sm bg-transparent outline-none resize-none" rows={3} {...register('description_commodities', { required: true })} />
             </div>
           </div>
           <div className="flex flex-row items-center w-full space-x-2"> 
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Quantity</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('quantity', { required: true })} />
               </div>
             </div>
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Weights/Measurements</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('weights_measurements', { required: true })} />
               </div>
             </div>
@@ -200,13 +202,13 @@ const SideBar: React.FC<TypeProps> = ({ items, setItem, setSingleItem }) => {
           <div className="flex flex-row items-center w-full space-x-2"> 
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Unit Value</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('unit_value', { required: true })} />
               </div>
             </div>
             <div className="flex flex-col w-full space-y-1">
               <label className="px-1 text-xs text-white text-opacity-50">Total Value</label>
-              <div className="flex items center w-full rounded-lg bg-gray-800 border border-gray-800 focus-within:border-gray-400">
+              <div className="flex items center w-full rounded-lg bg-gray-800 text-blue-100 border-2 border-gray-800 focus-within:border-blue-300">
                 <input type="text" className="w-full p-3 bg-transparent outline-none" {...register('total_value', { required: true })} />
               </div>
             </div>

@@ -1,14 +1,14 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { FC, Fragment, useState } from 'react'
 import { PDFViewer, Page, Text, View, Document } from '@react-pdf/renderer'
-import { styles } from '../utils/PDFStyles'
+import { styles } from '../PDFStyles/MonitoringSlip'
 
 interface TypeProps {
   items: any
   singleItem: any
 }
 
-const PrintPreviewBack: FC<TypeProps> = ({ items, singleItem }) =>  {
+const PrintPreview: FC<TypeProps> = ({ items, singleItem }) =>  {
   let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
@@ -29,7 +29,7 @@ const PrintPreviewBack: FC<TypeProps> = ({ items, singleItem }) =>  {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
         </svg>
-        <span className="font-light text-xs">Print Back Page</span>
+        <span className="font-light text-xs">Print Preview</span>
       </button>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -96,25 +96,32 @@ const MyDocument = ({ items, singleItem }) => {
   return (
     <Document>
       <Page size="LETTER" style={styles.body}>
-        <View style={styles.table_backpage}>
-          {items.map((item: any, i: any) => (
-            <View style={styles.row} key={i}>
-              <Text style={styles.pkgs_unit}>{ item.pkgs_unit }</Text>
-              <Text style={styles.marks_numbers}>{ item.marks_numbers }</Text>
-              <Text style={styles.description_commodities}>{ item.description_commodities }</Text>
-              <Text style={styles.quantity}>{ item.quantity }</Text>
-              <Text style={styles.weights_measurements}>{ item.weights_measurements }</Text>
+        <View style={styles.first_layer}>
+          <Text style={styles.peza_enterprise}>{singleItem.peza_enterprise}</Text>
+          <Text style={styles.processor_name}>{singleItem.processor_name}</Text>
+        </View>
+        <View style={styles.second_layer}>
+          <Text style={styles.ecozone_location}>{singleItem.ecozone_location}</Text>
+          <Text style={styles.broker_company_name}>{singleItem.broker_company_name}</Text>
+        </View>
+        <View style={styles.third_layer}>
+          <Text style={styles.peza_accountable_form_serial_no}>{singleItem.peza_accountable_form_serial_no}</Text>
+        </View>
+        <View style={styles.fourth_layer}>
+          {items.map((item: any, i: number) => (
+            <View style={styles.table_row} key={i}>
+              <Text style={styles.quantity_unit}>{ item.quantity_unit }</Text>
+              <Text style={styles.description_of_goods_commodities}>{ item.description_of_goods_commodities }</Text>
               <Text style={styles.unit_value}>{ item.unit_value }</Text>
-              <Text style={styles.total_value}>{ item.total_value }</Text>
             </View>
           ))}
         </View>
-        <View style={styles.commodity_info}>
-          <Text style={styles.delivery_receipt_no}>{ singleItem.delivery_receipt_no }</Text>
+        <View style={styles.fifth_layer}>
+          <Text>{singleItem.date_filed}</Text>
         </View>
       </Page>
     </Document>
   )
 }
 
-export default PrintPreviewBack
+export default PrintPreview
