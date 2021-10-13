@@ -1,14 +1,14 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { FC, Fragment, useState } from 'react'
 import { PDFViewer, Page, Text, View, Document } from '@react-pdf/renderer'
-import { styles } from '../utils/PDFStyles'
+import { styles } from '../PDFStyles/ApplicationForPermit'
 
 interface TypeProps {
   items: any
   singleItem: any
 }
 
-const PrintPreviewFront: FC<TypeProps> = ({ items, singleItem }) =>  {
+const PrintPreviewBack: FC<TypeProps> = ({ items, singleItem }) =>  {
   let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
@@ -29,7 +29,7 @@ const PrintPreviewFront: FC<TypeProps> = ({ items, singleItem }) =>  {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
         </svg>
-        <span className="font-light text-xs">Print Front Page</span>
+        <span className="font-light text-xs">Print Back Page</span>
       </button>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -93,15 +93,10 @@ const PrintPreviewFront: FC<TypeProps> = ({ items, singleItem }) =>  {
 }
 
 const MyDocument = ({ items, singleItem }) => {
-  console.log(items, singleItem)
   return (
     <Document>
       <Page size="LETTER" style={styles.body}>
-        <View style={styles.header}>
-          <Text style={styles.top_date}>{ singleItem.permit_date }</Text>
-          <Text style={styles.top_permission}>{ singleItem.permission_hereby_granted }</Text>
-        </View>
-        <View style={styles.table}>
+        <View style={styles.table_backpage}>
           {items.map((item: any, i: any) => (
             <View style={styles.row} key={i}>
               <Text style={styles.pkgs_unit}>{ item.pkgs_unit }</Text>
@@ -115,22 +110,11 @@ const MyDocument = ({ items, singleItem }) => {
           ))}
         </View>
         <View style={styles.commodity_info}>
-          <Text style={styles.use_of_goods_in_the_zone}>{ singleItem.use_of_goods_in_the_zone }</Text>
-          <Text style={styles.currency_payment_will_be_made}>{ singleItem.currency_payment_will_be_made }</Text>
-          <Text style={styles.name_address_supplier}>{ singleItem.name_address_supplier }</Text>
-          <View style={styles.row_container}>
-            <Text style={styles.date_delivery_zone}>{ singleItem.date_delivery_zone }</Text>
-            <Text style={styles.carrier}>{ singleItem.carrier }</Text>
-          </View>
-          <Text style={styles.zone_enterprise_registration_no}>{ singleItem.zone_enterprise_registration_no }</Text>
-        </View>
-        <View style={styles.permit_area}>
-          <Text style={styles.bottom_date}>{ singleItem.permit_date }</Text>
-          <Text style={styles.bottom_permission}>{ singleItem.permission_hereby_granted }</Text>
+          <Text style={styles.delivery_receipt_no}>{ singleItem.delivery_receipt_no }</Text>
         </View>
       </Page>
     </Document>
   )
 }
 
-export default PrintPreviewFront
+export default PrintPreviewBack
